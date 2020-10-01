@@ -30,10 +30,25 @@ def max_cours_inf(hash,n)
   max_value(max_cours_inf)
 end
 
-max_value(hash)
-min_value(hash)
-cours_inf = cours_inf(hash,6000)
-puts cours_inf
-max_cours_inf(hash,6000)
+puts "Quelle est la question ? (entre 1 et 4)"
+puts "La ou les crypto qui ont la plus grosse valeur."
+puts "La ou les crypto qui ont la plus petite valeur."
+puts "Les devises dont le cours est inférieur à 6000"
+puts "La devise la plus chère parmi celles dont le cours est inférieur à 6000."
+input = gets.chomp.to_i
+
+case input
+when 1
+  max_value(hash)
+when 2
+  min_value(hash)
+when 3
+  cours_inf = cours_inf(hash,6000)
+  puts cours_inf
+when 4
+  max_cours_inf(hash,6000)
+else
+  puts "Bravo tu peux relancer le programme."
+end
 
 

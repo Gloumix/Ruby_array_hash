@@ -63,12 +63,35 @@ def nb_char_sort(a)
   end
 end
 
+puts "Quelle est la question ? (entre 1 et 8)"
+puts "1. Combien y a-t-il de handle dans cette array ?"
+puts "2. Quel est le handle le plus court de cette liste ?"
+puts "3. Combien y-a-t'il de handle contenant 5 caractères (le @ ne compte pas pour un caractère)"
+puts "4. Combien commencent par une majuscule (première lettre juste après le @) ?"
+puts "5. Trie la liste de handle par ordre alphabétique."
+puts "6. Trie la liste de handle par taille des handle (les plus petits en premiers, les plus grands après)"
+puts "7. Quelle est la position dans l'array de la personne @epenser ?"
+puts "8. Sors-moi une répartition des handle par taille de ces derniers (nombre de handle avec 1 caractère, nombre de handle avec 2 caractères, nombre de handle avec 3 caractères, etc)"
+print "> "
+input = gets.chomp.to_i
 
-length(a)
-min(a)
-numb_char(a,5)
-capital_number(a)
-alphabetical(a)
-size_order(a)
-e_penser(a)
-nb_char_sort(a)
+case input
+when 1
+  length(a)
+when 2
+  min(a)
+when 3
+  numb_char(a,5)
+when 4
+  capital_number(a)
+when 5
+  alphabetical(a)
+when 6
+  size_order(a)
+when 7
+  e_penser(a)
+when 8
+  nb_char_sort(a)
+else
+  puts "Bravo tu peux relancer le programme."
+end
